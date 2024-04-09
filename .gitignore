@@ -1,0 +1,4 @@
+media/*
+destinations.csv
+.env
+venv

@@ -1,0 +1,14 @@
+services:
+  weewx:
+      image: ghcr.io/jquagga/docker-weewx:main
+      container_name: weewx
+      devices:
+      - "/dev/bus/usb:/dev/bus/usb:rwm"
+      hostname: weewx
+      restart: unless-stopped
+      volumes:
+        - ./weewx-data:/home/mambauser/weewx-data
+        - /etc/localtime:/etc/localtime:ro
+      user: "1000"
+      environment:
+        - WEEWX_ROOT=/home/weewx-data
