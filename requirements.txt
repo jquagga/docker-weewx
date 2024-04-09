@@ -1,1 +1,2 @@
 weewx==5.0.2
+pyusb
