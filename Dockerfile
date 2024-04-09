@@ -7,4 +7,4 @@ RUN micromamba install -y -n base -f /tmp/environment.yml && \
 
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
-ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "weewxd" ]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh"]
