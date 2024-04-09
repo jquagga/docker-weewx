@@ -5,10 +5,9 @@ services:
       devices:
       - "/dev/bus/usb:/dev/bus/usb:rwm"
       hostname: weewx
-      restart: unless-stopped
+      #restart: unless-stopped
       volumes:
         - ./weewx-data:/home/mambauser/weewx-data
         - /etc/localtime:/etc/localtime:ro
       user: "1000"
-      environment:
-        - WEEWX_ROOT=/home/weewx-data
+      command: "weewxd"
