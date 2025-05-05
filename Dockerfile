@@ -1,4 +1,4 @@
-FROM ghcr.io/mamba-org/micromamba:latest@sha256:ddd798c8a78d8e198cad33aa8c3a14d644d38fd3ceb4abd9d23686957f06de44
+FROM ghcr.io/mamba-org/micromamba:latest@sha256:2bddf127d949c6d1920d77ef507306e89e2b4abc2a02d08fda87adfc7d0d2b31
 
 COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/environment.yml
 COPY --chown=$MAMBA_USER:$MAMBA_USER requirements.txt /tmp/requirements.txt
